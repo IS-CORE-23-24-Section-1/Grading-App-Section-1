@@ -1,1 +1,1 @@
-# David is my friend
+# Section 1 Grading App
