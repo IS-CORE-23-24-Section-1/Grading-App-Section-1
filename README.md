@@ -1,1 +1,1 @@
-# David is my daddy
+# David is my friend
