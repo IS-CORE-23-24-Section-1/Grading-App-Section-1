@@ -6,27 +6,49 @@ namespace Grading_App_Section_1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult TAView()
         {
-            return View();
+            return null;
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult TAPost()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return null;
+        }
+        [HttpGet]
+        public IActionResult TeachView()
+        {
+            return null;
+        }
+        [HttpPost]
+        public IActionResult TeachPost()
+        {
+            return null;
+        }
+        [HttpGet]
+        public IActionResult JudgeView()
+        {
+            return null;
+        }
+        [HttpPost]
+        public IActionResult JudgePost()
+        {
+            return null;
+        }
+        [HttpGet]
+        public IActionResult StudView()
+        {
+            return null;
+        }
+        [HttpPost]
+        public IActionResult StudPost()
+        {
+            return null;
         }
     }
 }
