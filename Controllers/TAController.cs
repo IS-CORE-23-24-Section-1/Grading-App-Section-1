@@ -1,10 +1,8 @@
-using Grading_App_Section_1.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Grading_App_Section_1.Controllers
 {
-    public class HomeController : Controller
+    public class TAController : Controller
     {
         public IActionResult Index()
         {
