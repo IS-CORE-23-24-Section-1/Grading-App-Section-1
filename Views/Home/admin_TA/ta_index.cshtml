@@ -3,4 +3,27 @@
 *@
 @{
 }
-<h1>This is a test do you see this - lorin.</h1>
+
+@*@model -----*@
+
+<h1>TA's</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>TA Name</td>
+            <td>Assigned Class</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.first_name @x.last_name</td>
+            <td>@x.class_assignment</td>
+        </tr>
+        }
+    </tbody>
+</table>
+<button type="Sumbit">Add TA</button>
+
