@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Page</title>
+    <style>
+        /* Style for the box around the form */
+        .form-box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Style for form fields */
+        .form-field {
+            margin-bottom: 10px;
+        }
+
+        /* Style for the save button */
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <form>
+            <div class="form-field">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-field">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-field">
+                <label>Current Class Assignment:</label>
+                <input type="checkbox" id="is401" name="classAssignment" value="IS 401">
+                <label for="is401">IS 401</label><br>
+                <input type="checkbox" id="is413" name="classAssignment" value="IS 413">
+                <label for="is413">IS 413</label><br>
+                <input type="checkbox" id="is414" name="classAssignment" value="IS 414">
+                <label for="is414">IS 414</label><br>
+                <input type="checkbox" id="is455" name="classAssignment" value="IS 455">
+                <label for="is455">IS 455</label><br>
+            </div>
+
+            <button type="submit" class="save-button">Save</button>
+        </form>
+    </div>
+</body>
+</html>
