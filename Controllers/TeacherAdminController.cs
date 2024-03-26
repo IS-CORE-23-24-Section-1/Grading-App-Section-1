@@ -9,7 +9,7 @@ namespace Grading_App_Section_1.Controllers
             return View();
         }
 
-        public IActionResult JudgeSummary()
+        public IActionResult Judging()
         {
             return View();
         }
