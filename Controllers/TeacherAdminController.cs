@@ -23,7 +23,7 @@ namespace Grading_App_Section_1.Controllers
         }
         public IActionResult AddSurveyItem()
         {
-            return View("~/Views/Team_9/AddSurveyItem");
+            return View("~/Views/Team_9/AddSurveyItem.cshtml");
         }
 
     }
