@@ -274,6 +274,7 @@ footer {
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
+  text-align: center;
 }
 
 .rounded-table thead th {
@@ -283,7 +284,6 @@ footer {
 
 .rounded-table tbody tr {
   background-color: #d9e4ec; /* Background color for the rows */
-  border-radius: 10px; /* Adjust the radius as needed */
 }
 
 .rounded-table td {
@@ -292,18 +292,12 @@ footer {
 }
 
 /* Pseudo-element to create rounded corners */
-.rounded-table tbody tr:first-child td:first-child {
-  border-top-left-radius: 10px;
+.rounded-table tbody tr td:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
-.rounded-table tbody tr:first-child td:last-child {
-  border-top-right-radius: 10px;
-}
-
-.rounded-table tbody tr:last-child td:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-.rounded-table tbody tr:last-child td:last-child {
-  border-bottom-right-radius: 10px;
+.rounded-table tbody tr td:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
