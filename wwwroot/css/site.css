@@ -255,3 +255,8 @@ footer {
   font-style: normal;
   font-variation-settings: "slnt" 0;
 }
+
+/* Nexgas additional styling */
+.rounded-edges {
+  border-radius: 15px;
+}
