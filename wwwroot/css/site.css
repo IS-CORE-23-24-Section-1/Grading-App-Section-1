@@ -187,6 +187,10 @@ footer {
   font-weight: bold;
 }
 
+.norm-wt {
+  font-weight: normal;
+}
+
 /* Color Palette for Nexus Gas*/
 .bg-nextex-bg .bg-nextex-btn-text {
   background-color: var(--color-nearly-white);
