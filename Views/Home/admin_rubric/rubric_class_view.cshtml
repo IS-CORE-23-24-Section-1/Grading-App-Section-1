@@ -31,7 +31,7 @@
         {
         <tr>
             <td>@x.points_possible</td>
-            <td>@x.rubric_requirements</td>
+            <td>@x.rubric_requirements <br /> @x.rubric_requirements_description</td>
 
             <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.class">Edit</a></td>
             <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.class">Delete</a></td>
