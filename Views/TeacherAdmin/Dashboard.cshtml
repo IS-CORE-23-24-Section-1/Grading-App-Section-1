@@ -1,39 +1,78 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
-<div class="text-left">
-    <h1 class="display-4">Dashboard</h1>
-</div>
+<br><br>
 <div>
-    <h2>Judges</h2>
-    <p>30/260 Graded</p>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: @((30.0 / 260.0) * 100)%;" aria-valuenow="@((30.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
-    </div><br>
-
-    <h2>IS 401</h2>
-    <p>75/260 Graded</p>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: @((75.0 / 260.0) * 100)%;" aria-valuenow="@((75.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
-    </div><br>
-
-    <h2>IS 413</h2>
-    <p>150/260 Graded</p>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: @((150.0 / 260.0) * 100)%;" aria-valuenow="@((150.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
-    </div><br>
-
-    <h2>IS 414</h2>
-    <p>90/260 Graded</p>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: @((90.0 / 260.0) * 100)%;" aria-valuenow="@((90.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
-    </div><br>
-
-    <h2>IS 455</h2>
-    <p>200/260 Graded</p>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: @((200.0 / 260.0) * 100)%;" aria-valuenow="@((200.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
-    </div><br> 
+    <div>
+        <a href="/TeacherAdmin/JudgeSummary" style="text-decoration: none; color: inherit;">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5><b>Judges</b></h5>
+                </div>
+                <div class="col-md-2">
+                    <p class="text-gray-800">20/120 Surveys Submitted</p>
+                </div>
+            </div>
+            <div class="progress" style="height: 3rem;">
+                <div class="progress-bar" role="progressbar" style="width: @((20.0 / 120.0) * 100)%; background-color: #3DA9FC;" aria-valuenow="@((30.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </a>
+    </div>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <h5><b>IS 401</b></h5>
+            </div>
+            <div class="col-md-2">
+                <p class="text-gray-800">75/260 Rubrics Graded</p>
+            </div>
+        </div>
+        <div class="progress" style="height: 3rem;">
+            <div class="progress-bar" role="progressbar" style="width: @((75.0 / 260.0) * 100)%;" aria-valuenow="@((30.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <h5><b>IS 413</b></h5>
+            </div>
+            <div class="col-md-2">
+                <p class="text-gray-800">150/260 Rubrics Graded</p>
+            </div>
+        </div>
+        <div class="progress" style="height: 3rem;">
+            <div class="progress-bar" role="progressbar" style="width: @((150.0 / 260.0) * 100)%;" aria-valuenow="@((150.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <h5><b>IS 414</b></h5>
+            </div>
+            <div class="col-md-2">
+                <p class="text-gray-800">90/260 Rubrics Graded</p>
+            </div>
+        </div>
+        <div class="progress" style="height: 3rem;">
+            <div class="progress-bar" role="progressbar" style="width: @((90.0 / 260.0) * 100)%;" aria-valuenow="@((90.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <h5><b>IS 455</b></h5>
+            </div>
+            <div class="col-md-2">
+                <p class="text-gray-800">200/260 Rubrics Graded</p>
+            </div>
+        </div>
+        <div class="progress" style="height: 3rem;">
+            <div class="progress-bar" role="progressbar" style="width: @((200.0 / 260.0) * 100)%;" aria-valuenow="@((200.0 / 260.0) * 100)" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div> 
+    <br><br>
 </div>
-
