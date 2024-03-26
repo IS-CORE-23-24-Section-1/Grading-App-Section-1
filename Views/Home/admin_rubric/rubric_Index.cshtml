@@ -1,5 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewBag.Title = "Rubric Index";
 }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rubric Index</title>
+</head>
+<body>
+    <h1>Rubric Index</h1>
+
+    <div class="card-container">
+        @foreach (var course in Model.Courses)
+        {
+            <div class="card" onclick="navigateToRequirements('@course.Code')">
+                <h2>@course.Name</h2>
+                <div class="subtitle">20% of overall</div>
+                <div class="subtitle">@course.RequirementsCount requirements</div>
+            </div>
+        }
+    </div>
+
+    <script>
+        //GOING TO HAVE TO EDIT THIS PART TO MAKE THE "REQUIREMENTS" DYNAMIC
+
+        // Function to navigate to the requirements view
+        function navigateToRequirements(courseCode) {
+            // Replace the URL with the appropriate route for the requirements view
+
+            window.location.href = '/Requirements/' + courseCode;
+        }
+    </script>
+</body>
+</html>
