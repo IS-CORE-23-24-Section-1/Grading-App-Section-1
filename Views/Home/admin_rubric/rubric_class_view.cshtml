@@ -3,3 +3,40 @@
 *@
 @{
 }
+
+@*@model -----*@
+
+@*Add back button*@
+
+@*Add up all of the points within a class*@
+@{
+    // Assuming Model.Classes is the collection of class objects
+    int totalPossiblePoints = Model.Classes.Sum(c => c.possible_score);
+}
+
+<h1>@Model.class</h1>
+<h4>(@totalPossiblePoints possible points)</h4>
+
+<h2>Objectives</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Points Possible</td>
+            <td>Objectives</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.points_possible</td>
+            <td>@x.rubric_requirements</td>
+
+            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.class">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.class">Delete</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<button type="Sumbit">Add Objective</button>
