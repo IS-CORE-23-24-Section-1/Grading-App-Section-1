@@ -2,6 +2,8 @@
     ViewBag.Title = "Rubric Index";
 }
 
+@*@model
+*@
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +13,12 @@
     <h1>Rubric Index</h1>
 
     <div class="card-container">
-        @foreach (var course in Model.Courses)
+        @foreach (var course in Model.Rubric_Items)
         {
             <div class="card" onclick="navigateToRequirements('@course.Code')">
                 <h2>@course.Name</h2>
                 <div class="subtitle">20% of overall</div>
-                <div class="subtitle">@course.RequirementsCount requirements</div>
+                <div class="subtitle">@course.rubric_item_id.Count() requirements</div>
             </div>
         }
     </div>

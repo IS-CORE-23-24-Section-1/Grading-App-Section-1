@@ -9,7 +9,7 @@
 <h1>Add Objective</h1>
 
 <form method="post">
-    <select asp-for="possible_score">
+    <select asp-for="max_points">
         <option value="">Possible Point(s)</option>
         @for (int i = 1; i <= 10; i++)
         {
@@ -17,11 +17,11 @@
         }
     </select>
     <br /><br />
-    <label asp-for="rubric_requirements">Objective Name</label>
-    <input asp-for="rubric_requirements" />
+    <label asp-for="rubric_items_text">Objective Name</label>
+    <input asp-for="rubric_items_text" />
     <br /><br />
-    <label asp-for="rubric_requirements_description">Description</label>
-    <input asp-for="rubric_requirements_description" />
+    <label asp-for="rubric_items_description">Description</label>
+    <input asp-for="rubric_items_description" />
     <br /><br />
     <button type="submit">Save</button>
 </form>

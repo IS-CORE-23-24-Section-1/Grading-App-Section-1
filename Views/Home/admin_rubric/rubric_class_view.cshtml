@@ -4,17 +4,17 @@
 @{
 }
 
-@*@model -----*@
-
+@*@model Rubric_Items
+*@
 @*Add back button*@
 
 @*Add up all of the points within a class*@
 @{
     // Assuming Model.Classes is the collection of class objects
-    int totalPossiblePoints = Model.Classes.Sum(c => c.possible_score);
+    int totalPossiblePoints = Model.Rubric_Items.Sum(c => c.max_points);
 }
 
-<h1>@Model.class</h1>
+<h1>@Model.class_number</h1>
 <h4>(@totalPossiblePoints possible points)</h4>
 
 <h2>Objectives</h2>
@@ -30,11 +30,11 @@
         @foreach (var x in Model)
         {
         <tr>
-            <td>@x.points_possible</td>
-            <td>@x.rubric_requirements <br /> @x.rubric_requirements_description</td>
+            <td>@x.max_points</td>
+            <td>@x.rubric_item_text <br /> @x.rubric_item_description</td>
 
-            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.class">Edit</a></td>
-            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.class">Delete</a></td>
+            <td><a class="btn btn-info" asp-controller="TeacherAdmin" asp-action="Edit_rubric" asp-route-id="@x.class_number">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="TeacherAdmin" asp-action="Delete_rubric" asp-route-id="@x.class_number">Delete</a></td>
         </tr>
         }
     </tbody>

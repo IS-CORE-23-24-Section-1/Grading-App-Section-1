@@ -22,8 +22,8 @@
             <td>@x.first_name @x.last_name</td>
             <td>@x.class_assignment</td>
 
-            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.netid">Edit</a></td>
-            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.netid">Delete</a></td>
+            <td><a class="btn btn-info" asp-controller="TeacherAdmin" asp-action="Edit_ta" asp-route-id="@x.ta_netid">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="TeacherAdmin" asp-action="Delete_ta" asp-route-id="@x.ta_netid">Delete</a></td>
         </tr>
         }
     </tbody>
