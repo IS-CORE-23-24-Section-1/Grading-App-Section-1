@@ -1,49 +1,153 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Grading_App_Section_1</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Grading_App_Section_1.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Grading_App_Section_1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+﻿@{
+    ViewData["Title"] = "Login";
+}
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Grading_App_Section_1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* CSS styles */
+    .LoginBox {
+        width: 310px;
+        height: 275px;
+        position: relative;
+    }
+
+    .Rectangle1 {
+        width: 310px;
+        height: 275px;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        background: #FFFFFE;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        border: 2px #094067 solid;
+    }
+
+    .Login {
+        left: 123px;
+        top: 24px;
+        position: absolute;
+        text-align: center;
+        color: #094067;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .Group2 {
+        width: 229px;
+        height: 54px;
+        left: 40px;
+        top: 66px;
+        position: absolute;
+    }
+
+    .Rectangle2 {
+        width: 229px;
+        height: 37px;
+        left: 0px;
+        top: 17px;
+        position: absolute;
+        border-radius: 5px;
+        border: 1px #094067 solid;
+    }
+
+    .EnterUsername {
+        left: 10px;
+        top: 27px;
+        position: absolute;
+        color: #90B4CE;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 16.92px;
+        word-wrap: break-word;
+    }
+
+    .Username {
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        color: #094067;
+        font-size: 13px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 15.71px;
+        word-wrap: break-word;
+    }
+
+    .Group3 {
+        width: 229px;
+        height: 54px;
+        left: 40px;
+        top: 130px;
+        position: absolute;
+    }
+
+    .EnterPassword {
+        left: 10px;
+        top: 27px;
+        position: absolute;
+        color: #90B4CE;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 16.92px;
+        word-wrap: break-word;
+    }
+
+    .Password {
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        color: #094067;
+        font-size: 13px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 15.71px;
+        word-wrap: break-word;
+    }
+
+    .Group1 {
+        width: 229px;
+        height: 36px;
+        left: 40px;
+        top: 209px;
+        position: absolute;
+    }
+
+    .Rectangle4 {
+        width: 229px;
+        height: 36px;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        background: #3DA9FC;
+        border-radius: 5px;
+        border: 1px #094067 solid;
+    }
+</style>
+
+<div class="LoginBox">
+    <div class="Rectangle1"></div>
+    <div class="Login">Login</div>
+    <div class="Group2">
+        <div class="Rectangle2"></div>
+        <div class="EnterUsername">Enter Username</div>
+        <div class="Username">Username</div>
+    </div>
+    <div class="Group3">
+        <div class="Rectangle2"></div>
+        <div class="EnterPassword">Enter Password</div>
+        <div class="Password">Password</div>
+    </div>
+    <div class="Group1">
+        <div class="Rectangle4"></div>
+        <div class="Login">Login</div>
+    </div>
+</div>
+
