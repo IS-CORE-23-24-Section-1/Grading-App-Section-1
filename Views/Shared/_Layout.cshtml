@@ -1,153 +1,50 @@
-﻿@{
-    ViewData["Title"] = "Login";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Grading_App_Section_1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Grading_App_Section_1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid">
+            <div class="row">
+                <!-- Navbar -->
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center">
+                            <img src="~/nexuslogo.jpg" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h6 class="mt-3">Dashboard</h6>
+                        </div>
+                        <ul class="nav flex-column justify-content-center align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GitHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Info</a>
+                            </li>
+                            <!-- Add more navbar links here -->
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<style>
-    /* CSS styles */
-    .LoginBox {
-        width: 310px;
-        height: 275px;
-        position: relative;
-    }
-
-    .Rectangle1 {
-        width: 310px;
-        height: 275px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        background: #FFFFFE;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        border: 2px #094067 solid;
-    }
-
-    .Login {
-        left: 123px;
-        top: 24px;
-        position: absolute;
-        text-align: center;
-        color: #094067;
-        font-size: 24px;
-        font-family: Inter;
-        font-weight: 400;
-        word-wrap: break-word;
-    }
-
-    .Group2 {
-        width: 229px;
-        height: 54px;
-        left: 40px;
-        top: 66px;
-        position: absolute;
-    }
-
-    .Rectangle2 {
-        width: 229px;
-        height: 37px;
-        left: 0px;
-        top: 17px;
-        position: absolute;
-        border-radius: 5px;
-        border: 1px #094067 solid;
-    }
-
-    .EnterUsername {
-        left: 10px;
-        top: 27px;
-        position: absolute;
-        color: #90B4CE;
-        font-size: 14px;
-        font-family: Inter;
-        font-weight: 400;
-        line-height: 16.92px;
-        word-wrap: break-word;
-    }
-
-    .Username {
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        color: #094067;
-        font-size: 13px;
-        font-family: Inter;
-        font-weight: 400;
-        line-height: 15.71px;
-        word-wrap: break-word;
-    }
-
-    .Group3 {
-        width: 229px;
-        height: 54px;
-        left: 40px;
-        top: 130px;
-        position: absolute;
-    }
-
-    .EnterPassword {
-        left: 10px;
-        top: 27px;
-        position: absolute;
-        color: #90B4CE;
-        font-size: 14px;
-        font-family: Inter;
-        font-weight: 400;
-        line-height: 16.92px;
-        word-wrap: break-word;
-    }
-
-    .Password {
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        color: #094067;
-        font-size: 13px;
-        font-family: Inter;
-        font-weight: 400;
-        line-height: 15.71px;
-        word-wrap: break-word;
-    }
-
-    .Group1 {
-        width: 229px;
-        height: 36px;
-        left: 40px;
-        top: 209px;
-        position: absolute;
-    }
-
-    .Rectangle4 {
-        width: 229px;
-        height: 36px;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        background: #3DA9FC;
-        border-radius: 5px;
-        border: 1px #094067 solid;
-    }
-</style>
-
-<div class="LoginBox">
-    <div class="Rectangle1"></div>
-    <div class="Login">Login</div>
-    <div class="Group2">
-        <div class="Rectangle2"></div>
-        <div class="EnterUsername">Enter Username</div>
-        <div class="Username">Username</div>
-    </div>
-    <div class="Group3">
-        <div class="Rectangle2"></div>
-        <div class="EnterPassword">Enter Password</div>
-        <div class="Password">Password</div>
-    </div>
-    <div class="Group1">
-        <div class="Rectangle4"></div>
-        <div class="Login">Login</div>
-    </div>
-</div>
+                <!-- Page content -->
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
 
