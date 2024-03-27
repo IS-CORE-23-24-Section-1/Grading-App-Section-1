@@ -111,6 +111,10 @@
   color: inherit;
 }
 
+.hover-element {
+  cursor: pointer;
+}
+
 /* General styling classes */
 .bold {
   font-weight: bold;
