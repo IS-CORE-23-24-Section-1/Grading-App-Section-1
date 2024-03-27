@@ -1,0 +1,76 @@
+﻿@section Scripts 
+{
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script>
+        $(function () {
+            $("#teamsContainer").sortable({
+                placeholder: "ui-state-highlight",
+                update: function (event, ui) {
+                    var orderedIds = $(this).sortable('toArray', { attribute: 'data-team-id' });
+                    // AJAX call to send the new order to the server
+                    $.ajax({
+                        url: '/YourController/UpdateRanking',
+                        type: 'POST',
+                        data: { orderedIds: orderedIds },
+                        success: function (response) {
+                            console.log("Ranking updated successfully.");
+                        },
+                        error: function (xhr, status, error) {
+                            console.log("Error updating ranking.");
+                        }
+                    });
+                }
+            });
+            $("#teamsContainer").disableSelection();
+        });
+    </script>
+
+    <style>
+        .team-container {
+            margin-bottom: 10px; /* Adjust this value as needed */
+        }
+
+        .team {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+}
+
+
+<div class="container">
+    <!-- Existing content -->
+
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h3>Presentation Rankings</h3>
+            <h4>
+                Throughout the course of presentations, drag the groups, ranking them in the order you see fit.
+            </h4>
+            <h4>The group in position 1 being the best presentation you saw.</h4>
+            <div id="teamsContainer">
+                <!-- Sample team items -->
+                <div class="team-container">
+                    <div class="team list-group-item" data-team-id="1">Group 1</div>
+                </div>
+                <div class="team-container">
+                    <div class="team list-group-item" data-team-id="2">Group 2</div>
+                </div>
+                <div class="team-container">
+                    <div class="team list-group-item" data-team-id="3">Group 3</div>
+                </div>
+                <div class="team-container">
+                    <div class="team list-group-item" data-team-id="4">Group 4</div>
+                </div>
+                <div class="team-container">
+                    <div class="team list-group-item" data-team-id="5">Group 5</div>
+                </div>
+                <!-- Add more team containers as needed -->
+            </div>
+        </div>
+    </div>
+</div>
