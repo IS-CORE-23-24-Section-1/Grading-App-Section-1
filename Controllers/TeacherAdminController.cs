@@ -4,7 +4,17 @@ namespace Grading_App_Section_1.Controllers
 {
     public class TeacherAdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
+        public IActionResult JudgeSummary()
+        {
+            return View();
+        }
+
+        public IActionResult JudgeView()
         {
             return View();
         }
