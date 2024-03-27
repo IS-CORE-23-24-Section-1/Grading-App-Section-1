@@ -121,11 +121,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Add or modify these classes based on specific component needs across your designs. */
-=======
-  margin-bottom: 60px;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -179,4 +174,3 @@ footer {
     padding-top: 48px; /* Adjust padding as needed */
   }
 }
->>>>>>> 1dfdfd1bc3b03faf6cba6e4b6a64d862074f04d2
