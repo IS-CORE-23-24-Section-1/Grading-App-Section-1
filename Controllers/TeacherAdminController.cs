@@ -15,11 +15,11 @@ namespace Grading_App_Section_1.Controllers
         }
         public IActionResult AddRoom()
         {
-            return View("~/Views/Team_9/AddRoom");
+            return View("~/Views/Team_9/AddRoom.cshtml");
         }
         public IActionResult JudgeDash()
         {
-            return View("~/Views/Team_9/JudgeDash");
+            return View("~/Views/Team_9/JudgeDash.cshtml");
         }
         public IActionResult AddSurveyItem()
         {
