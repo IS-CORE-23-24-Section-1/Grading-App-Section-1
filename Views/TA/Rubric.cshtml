@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <button style="border:none; background:none"> < <span style="font-size:larger">Return to Dashboard</span></button>
+</div>
+<br /><br />
+<form method="post">
+   <table>
+       <thead style="text-align:center">
+        <td class="col-4"><h3>Objectives</h3></td>
+        <td class="col-2"><h3>Possible Points</h3></td>
+        <td class="col-1"><h3>Scored</h3></td>
+        <td class="col-4"><h3>Notes</h3></td>
+       </thead>
+       <tbody>
+            <tr>
+                <td>
+                    <h6>Use HTTPS/TLS</h6>
+                    <p>Does their solution utilize HTTPS and or TLS</p>
+                    </td>
+                <td style="text-align:center">
+                    <strong>2</strong>
+                </td>
+                <td>
+                    <input class="score-input" id="score1" type="number" max="2" min="0" style="color:#3DA9FC; font-weight:bolder" />
+                </td>
+                <td>
+                    <textarea placeholder="Notes" style="width:100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h6>Enable HSTS</h6>
+                    <p>Is HSTS enabled in their solution</p>
+                </td>
+                <td style="text-align:center">
+                    <strong>1</strong>                
+                </td>
+                <td>
+                    <input class="score-input" id="score2" type="number" max="1" min="0" style="color:#3DA9FC; font-weight:bolder"/>
+                </td>
+                <td>
+                    <textarea placeholder="Notes" style="width:100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h6>Redirect HTTP to HTTPS</h6>
+                    <p>When trying to access their solution from an HTTP address, does it redirect you to an HTTPS address?</p>
+                </td>
+                <td style="text-align:center">
+                    <strong>1</strong>
+                </td>
+                <td>
+                    <input class="score-input" id="score3" type="number" max="1" min="0" style="color:#3DA9FC; font-weight:bolder" />
+                </td>
+                <td>
+                    <textarea placeholder="Notes" style="width:100%"></textarea>
+                </td>
+            </tr>
+       </tbody>
+    
+</table>
+
+    <div id="calculationResult" style="margin-bottom: 20px;">
+        Points Earned: <span id="pointsEarned">0</span> / <span id="pointsPossible">4</span>
+    </div>
+    <input type="submit" />
+</form>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var scoreInputs = document.querySelectorAll('.score-input');
+        var pointsEarnedDisplay = document.getElementById('pointsEarned');
+        function calculatePoints() {
+            var pointsEarned = 0;
+            scoreInputs.forEach(function (input) {
+                pointsEarned += parseFloat(input.value) || 0;
+            });
+            pointsEarnedDisplay.textContent = pointsEarned.toString();
+        }
+        scoreInputs.forEach(function (input) {
+            input.addEventListener('change', calculatePoints);
+        });
+        // Run calculation on page load in case of pre-filled values
+        calculatePoints();
+    });
+</script>

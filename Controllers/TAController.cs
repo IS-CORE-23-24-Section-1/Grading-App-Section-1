@@ -4,7 +4,7 @@ namespace Grading_App_Section_1.Controllers
 {
     public class TAController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Rubric()
         {
             return View();
         }
