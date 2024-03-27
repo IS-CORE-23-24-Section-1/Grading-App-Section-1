@@ -2,18 +2,18 @@
 :root {
     --color-dark-blue: #094067;
     --color-bright-blue: #1C74DB;
-    --color-sky-blue: #3DA9FC;
+    --color-sky-blue: #3DA9FC; /* FIGMA button color */
     --color-dark-gray: #4D4D4D;
-    --color-gray-blue: #5F6C7B;
+    --color-gray-blue: #5F6C7B; /* Paragraph color */
     --color-light-blue: #72BCD6;
     --color-soft-blue: #80C8E8;
-    --color-pale-blue: #90B4CE;
+    --color-pale-blue: #90B4CE; /* Secondary color */
     --color-ice-blue: #A0DAFB;
     --color-light-gray: #CDCDCD;
-    --color-pale-gray: #D9E4EC;
+    --color-pale-gray: #D9E4EC; /* Secondary muted */
     --color-almost-white: #EDEDED;
-    --color-bright-red: #EF4565;
-    --color-nearly-white: #FFFFFE;
+    --color-bright-red: #EF4565; /*Teriary */
+    --color-nearly-white: #FFFFFE; /* FIGMA background color, button text */
     --color-black-transparent: rgba(0, 0, 0, 0.25);
 }
 
